@@ -1,0 +1,260 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Solo Hub",
+   LoadingTitle = "Solo Hub",
+   LoadingSubtitle = "By SungJinWoo",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Solo Hub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "sKK8CVaG8k", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Solo",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Solo Hub"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab1 = Window:CreateTab("READ ME", 4483362458) -- Title, Image
+
+
+local Section = Tab1:CreateSection("INF DUNGEON METHOD")
+
+
+local Label = Tab1:CreateLabel("Method 1 is hurbis dont use anything with it")
+
+local Label = Tab1:CreateLabel("Method 2 is slyveon recommend use fist and kamado heal dont use anything else and make tween 100 distans 10")
+
+local Label = Tab1:CreateLabel("Method 3 DONT USE BOTH SCRIPT")
+
+local Label = Tab1:CreateLabel("Method 3 recommend use fist and tween 100 - 150 - 200")
+
+local Label = Tab1:CreateLabel("Method 3 Recommend Skeered And use normal kill aura not op!!!!")
+
+local Label = Tab1:CreateLabel("Method 3 dont use auto orb or auto loot or auto skills")
+
+local Label = Tab1:CreateLabel("Method 3 For versawere use shockwave god mode and recommend fist")
+
+local Label = Tab1:CreateLabel("Method 3 For both scripts dont use any boost and dont use any auto loot,orb,skill can use them at last")
+
+
+
+local Tab2 = Window:CreateTab("Misc", 4483362458) -- Title, Image
+
+local Section = Tab2:CreateSection("Other")
+
+local Button = Tab2:CreateButton({
+   Name = "AntiCheat",
+   Callback = function()
+      local url = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/FixKick.lua"
+loadstring(game:HttpGet(url))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+local Button = Tab2:CreateButton({
+   Name = "OniHub Use For Boost",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Phyoue/Wlymalfrr/main/Wlymalfrr"))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+local Button = Tab2:CreateButton({
+   Name = "Auto Spin",
+   Callback = function()
+      getgenv().autospin = true
+getgenv().speed = 0.5
+ 
+local targetclan = {
+    "Kamado",
+    "Agatsuma",
+    "Uzui",
+    "Rengoku",
+    "Kamado ",
+    "Agatsuma ",
+    "Uzui ",
+    "Rengoku "
+}
+
+while getgenv().autospin do
+    local playerClan = game:GetService("ReplicatedStorage").Player_Data[game.Players.LocalPlayer.Name].Clan.Value
+    if table.find(targetclan, playerClan) then
+        getgenv().autospin = false
+    else
+        local args = {[1] = "check_can_spin"}
+        game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+        wait(getgenv().speed)
+    end
+end
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+local Button = Tab2:CreateButton({
+   Name = "Stop Auto Spin",
+   Callback = function()
+      getgenv().autospin = false
+getgenv().speed = 0.5
+ 
+local targetclan = {
+    "Kamado",
+    "Agatsuma",
+    "Uzui",
+    "Rengoku",
+    "Kamado ",
+    "Agatsuma ",
+    "Uzui ",
+    "Rengoku "
+}
+
+while getgenv().autospin do
+    local playerClan = game:GetService("ReplicatedStorage").Player_Data[game.Players.LocalPlayer.Name].Clan.Value
+    if table.find(targetclan, playerClan) then
+        getgenv().autospin = false
+    else
+        local args = {[1] = "check_can_spin"}
+        game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+        wait(getgenv().speed)
+    end
+end
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+local Button = Tab2:CreateButton({
+   Name = "Auto Daily Spin",
+   Callback = function()
+      while true do
+         wait()
+         gameGetService(ReplicatedStorage)WaitForChild(spins_thing_remote)InvokeServer()
+     end
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+local Button = Tab2:CreateButton({
+   Name = "Auto Blue Spider Flower",
+   Callback = function()
+      getgenv().TP = true
+      getgenv().speed = 200
+      getgenv().AutoRejoin = true -- Automatically rejoins when you kicked
+      getgenv().delay = 1
+       
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/DenizAf4can/SomeScripts/main/Project_Slayers_Lily'))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+
+
+
+local Tab3 = Window:CreateTab("Raid Method 1", 4483362458) -- Title, Image
+
+local Section = Tab3:CreateSection("Method 1 30mins")
+
+
+local Button = Tab3:CreateButton({
+   Name = "Hurbis",
+   Callback = function()
+      loadstring(game:HttpGetAsync("https://gist.github.com/NotHubris/16fbe2bf8d9563e09858c5cd2c6fafce/raw"))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+local Button = Tab3:CreateButton({
+   Name = "Oni Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Phyoue/Wlymalfrr/main/Wlymalfrr"))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+
+
+
+local Tab4 = Window:CreateTab("Raid Method 2", 4483362458) -- Title, Image
+
+local Section = Tab4:CreateSection("Method 2 60mins")
+
+
+local Button = Tab4:CreateButton({
+   Name = "Slyveon",
+   Callback = function()
+      local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/NewLoader.lua"
+repeat wait() until game:IsLoaded()
+loadstring(game:HttpGet(LoaderUrl))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+
+
+
+local Tab5 = Window:CreateTab("Raid Method 3", 4483362458) -- Title, Image
+
+local Section = Tab5:CreateSection("Raid Method 3 90mins+")
+
+
+local Button = Tab5:CreateButton({
+   Name = "Skeered",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/Skeereddo/name/main/krnl', true))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+local Button = Tab5:CreateButton({
+   Name = "Versawere",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/asterionnn/versaware_free/main/VersawareFree.lua", true))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+
+
+
+
+local Tab6 = Window:CreateTab("Information", 4483362458) -- Title, Image
+
+
+local Section = Tab6:CreateSection("Helper")
+
+
+local Label = Tab6:CreateLabel("this script is hub scripts")
+
+local Label = Tab6:CreateLabel("This Script Make you use other scripts good")
+
+local Label = Tab6:CreateLabel("This script make you use other scripts easy without multi execute")
+
+local Label = Tab6:CreateLabel("This Script Support all executors")
+
+local Label = Tab6:CreateLabel("If other scripts has update this script wil auto update")
+
+local Label = Tab6:CreateLabel("For more info join our discord")
+
+local Label = Tab6:CreateLabel("This script 0 lag so its easy to use 0 fps lose")
+
+local Label = Tab6:CreateLabel("the script is full free please if someone selling it report to me")
